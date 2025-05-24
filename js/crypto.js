@@ -21,10 +21,10 @@ function displayCrypto(data) {
     .forEach((coin) => {
       table += `
         <tr>
-          <td><img src="${coin.image}" width="20" alt="${coin.name} logo"> ${coin.name}</td>
-          <td>${coin.symbol.toUpperCase()}</td>
-          <td>$${coin.current_price.toFixed(2)}</td>
-          <td class="${coin.price_change_percentage_24h >= 0 ? 'text-success' : 'text-danger'}">
+          <td class="text-center"><img src="${coin.image}" width="20" alt="${coin.name} logo"> ${coin.name}</td>
+          <td class="text-center">${coin.symbol.toUpperCase()}</td>
+          <td class="text-center">$${coin.current_price.toFixed(2)}</td>
+          <td class="text-center ${coin.price_change_percentage_24h >= 0 ? 'text-success' : 'text-danger'}">
             ${coin.price_change_percentage_24h.toFixed(2)}%
           </td>
         </tr>`;
