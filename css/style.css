@@ -40,5 +40,7 @@ body {
   canvas {
     max-width: 100% !important;
     height: auto !important;
+    transition: all 0.5s ease;
   }
+  
   

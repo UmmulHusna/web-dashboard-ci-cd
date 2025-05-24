@@ -10,7 +10,9 @@
 <body>
   <div class="container py-4">
     <h2 class="mb-4">💰 Crypto Tracker Dashboard</h2>
+
     <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search coin...">
+
     <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead class="table-dark">
@@ -24,9 +26,12 @@
         <tbody id="cryptoTable"></tbody>
       </table>
     </div>
+
+    <!-- Pie Chart -->
     <div style="max-width: 400px; margin: 0 auto;">
       <canvas id="cryptoChart"></canvas>
-    </div>    
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/crypto.js"></script>
 </body>

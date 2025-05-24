@@ -39,6 +39,7 @@ function drawCryptoChart(data) {
   const prices = top5.map(coin => coin.current_price);
 
   const ctx = document.getElementById("cryptoChart").getContext("2d");
+
   new Chart(ctx, {
     type: "pie",
     data: {
@@ -46,8 +47,21 @@ function drawCryptoChart(data) {
       datasets: [{
         label: "Top 5 Coin Prices",
         data: prices,
-        backgroundColor: ["#f28ab2", "#f9d5e5", "#fad4d4", "#e06699", "#f7c8e0"]
+        backgroundColor: ["#f28ab2", "#f9d5e5", "#fad4d4", "#e06699", "#f7c8e0"],
+        borderWidth: 1
       }]
+    },
+    options: {
+      responsive: true,
+      animation: {
+        animateScale: true,
+        animateRotate: true
+      },
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      }
     }
   });
 }
