@@ -2,8 +2,8 @@
 
 /* Overall background and text */
 body {
-    background-color: #f9f5f0; /* soft beige */
-    color: #3e2e25; /* soft dark brown */
+    background-color: #fff0f5; /* light blush pink */
+    color: #3e2e25; /* dark brown text */
     font-family: 'Segoe UI', sans-serif;
   }
   
@@ -12,7 +12,7 @@ body {
     color: #3e2e25;
   }
   
-  /* Card and weather result box */
+  /* Card and result containers */
   .card, #weatherResult {
     background-color: #ffffff;
     border-radius: 10px;
@@ -21,33 +21,33 @@ body {
     border: none;
   }
   
-  /* Buttons */
+  /* Pink buttons */
   .btn-primary {
-    background-color: #b08968;
-    border-color: #b08968;
-    color: #fff;
+    background-color: #f28ab2;
+    border-color: #f28ab2;
+    color: white;
   }
   
   .btn-primary:hover {
-    background-color: #a0765c;
-    border-color: #a0765c;
+    background-color: #e06699;
+    border-color: #e06699;
   }
   
   /* Inputs */
   input.form-control {
-    background-color: #fffaf5;
-    border: 1px solid #dbcfc3;
+    background-color: #fff8fb;
+    border: 1px solid #f7c8e0;
     color: #3e2e25;
   }
   
   /* Tables */
   .table th {
-    background-color: #e3d5ca !important;
+    background-color: #f6b8d8 !important;
     color: #3e2e25;
   }
   
   .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f1e7dd;
+    background-color: #f6b8d8;
   }
   
   .table td {
