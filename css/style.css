@@ -1,0 +1,56 @@
+/* css/style.css */
+
+/* Overall background and text */
+body {
+    background-color: #f9f5f0; /* soft beige */
+    color: #3e2e25; /* soft dark brown */
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Headings */
+  h1, h2, h4 {
+    color: #3e2e25;
+  }
+  
+  /* Card and weather result box */
+  .card, #weatherResult {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border: none;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: #b08968;
+    border-color: #b08968;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #a0765c;
+    border-color: #a0765c;
+  }
+  
+  /* Inputs */
+  input.form-control {
+    background-color: #fffaf5;
+    border: 1px solid #dbcfc3;
+    color: #3e2e25;
+  }
+  
+  /* Tables */
+  .table th {
+    background-color: #e3d5ca !important;
+    color: #3e2e25;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f1e7dd;
+  }
+  
+  .table td {
+    vertical-align: middle;
+  }
+  
