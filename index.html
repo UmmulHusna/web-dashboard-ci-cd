@@ -1,89 +1,34 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to My Web Dashboard</title>
+  <title> 👩🏻‍💻Web Dashboard System with API Integration</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/web-dashboard-ci-cd/css/style.css">
-  <style>
-    body {
-      background: linear-gradient(to bottom right, #ffd1dc, #ffeef3);
-      color: #333;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-    }
-    .typewriter {
-      font-size: 1.5rem;
-      color: #f368a6;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #f368a6;
-      width: 0;
-      animation: typing 3s steps(40, end) forwards, blink .75s step-end infinite;
-      margin: 0 auto;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    .card {
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: scale(1.03);
-    }
-    .btn-pink {
-      background-color: #f8a5c2;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 500;
-    }
-    .btn-pink:hover {
-      background-color: #f78fb5;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="hero">
-    <h1>Hi, I'm Ummul Husna 👩🏻‍💻</h1>
-    <div class="typewriter">Welcome to my Web Dashboard Project 💗</div>
-  </div>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">🌐 Web Dashboard System with API Integration</h1>
 
-  <div class="container pb-5">
-    <div class="row justify-content-center g-4">
-      <div class="col-md-5">
-        <div class="card shadow-sm border-0">
-          <div class="card-body text-center">
-            <h5 class="card-title">☁️ Weather Dashboard</h5>
-            <p class="card-text">Check real-time weather data by city, with visuals and forecasts.</p>
-            <a href="/web-dashboard-ci-cd/dashboards/weather.html" class="btn btn-pink">View Weather</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5">
-        <div class="card shadow-sm border-0">
-          <div class="card-body text-center">
-            <h5 class="card-title">💰 Crypto Dashboard</h5>
-            <p class="card-text">Track live cryptocurrency prices with chart visualizations.</p>
-            <a href="/web-dashboard-ci-cd/dashboards/crypto.html" class="btn btn-pink">View Crypto</a>
-          </div>
-        </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-body">
+        <h4 class="card-title text-center">👩🏻‍💻 About Me</h4>
+        <p>Hello! I'm Ummul Husna, currently in my final year of studying Computer Science. This web dashboard project is part of my software development coursework, where I explored how to integrate real-time data using public APIs. Throughout this project, I focused on building responsive UI, handling API responses efficiently, and deploying the system through GitHub Pages as part of the CI/CD workflow. It's been a hands-on experience that helped strengthen my frontend development and data handling skills.
+        </p></p>
       </div>
     </div>
-  </div>
+
+    <h4 class="text-center mb-3"> ▶️ Live Dashboards</h4><div class="d-flex justify-content-center">
+      <div class="list-group w-75">
+        <a href="dashboards/weather.html" class="list-group-item list-group-item-action text-center">
+          🌤 Weather Dashboard
+        </a>
+        <a href="dashboards/crypto.html" class="list-group-item list-group-item-action text-center">
+          💰 Crypto Tracker Dashboard
+        </a>
+      </div>
+    </div>
 </body>
 </html>

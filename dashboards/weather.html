@@ -6,108 +6,36 @@
   <title>🌤 Weather Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/web-dashboard-ci-cd/css/style.css">
-  <style>
-    body {
-      background: linear-gradient(to bottom right, #ffeef3, #ffd1dc);
-      font-family: 'Segoe UI', sans-serif;
-    }
-    .card {
-      background-color: white;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    .weather-icon {
-      width: 80px;
-    }
-    .flag-icon {
-      width: 30px;
-      margin-left: 10px;
-    }
-    .btn-pink {
-      background-color: #f8a5c2;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 500;
-    }
-    .btn-pink:hover {
-      background-color: #f78fb5;
-      color: white;
-    }
-  </style>
 </head>
-<body>
+<body style="background-color: #ffeef3;">
   <div class="container py-5">
+    
+    <!-- Centered Title -->
     <div class="row mb-4">
       <div class="col text-center">
         <h2 class="fw-bold">🌤 Weather Dashboard</h2>
       </div>
     </div>
 
+    <!-- City Input -->
     <div class="row justify-content-center mb-4">
       <div class="col-md-6">
         <div class="input-group">
           <input type="text" id="cityInput" class="form-control" placeholder="Enter city name">
-          <button onclick="getWeather()" class="btn btn-pink">Get Weather</button>
+          <button onclick="getWeather()" class="btn btn-primary">Get Weather</button>
         </div>
       </div>
     </div>
 
+    <!-- Weather Result Box -->
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div id="loading" class="text-center text-muted mb-3" style="display:none;">Fetching weather data...</div>
-        <div id="weatherResult" class="card text-center d-none">
-          <h4 id="cityName" class="mb-2"></h4>
-          <img id="icon" class="weather-icon mb-2" alt="">
-          <p id="description" class="text-capitalize mb-1"></p>
-          <p><strong>Temperature:</strong> <span id="temp"></span>°C</p>
-          <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
-          <p><strong>Wind:</strong> <span id="wind"></span> m/s</p>
-          <p class="text-muted small" id="updatedTime"></p>
-        </div>
+        <div id="weatherResult" class="p-4 border rounded shadow-sm bg-white text-center"></div>
       </div>
     </div>
+
   </div>
 
-  <script>
-    async function getWeather() {
-      const city = document.getElementById("cityInput").value.trim();
-      const resultCard = document.getElementById("weatherResult");
-      const loading = document.getElementById("loading");
-
-      if (city === "") return;
-
-      loading.style.display = "block";
-      resultCard.classList.add("d-none");
-
-      const apiKey = "YOUR_API_KEY";
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if (data.cod !== 200) {
-          loading.innerText = "City not found. Please try again.";
-          return;
-        }
-
-        document.getElementById("cityName").innerHTML = `${data.name}, ${data.sys.country} <img src="https://flagsapi.com/${data.sys.country}/flat/32.png" class="flag-icon">`;
-        document.getElementById("icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        document.getElementById("description").textContent = data.weather[0].description;
-        document.getElementById("temp").textContent = data.main.temp;
-        document.getElementById("humidity").textContent = data.main.humidity;
-        document.getElementById("wind").textContent = data.wind.speed;
-        document.getElementById("updatedTime").textContent = "Last updated: " + new Date().toLocaleString();
-
-        loading.style.display = "none";
-        resultCard.classList.remove("d-none");
-      } catch (error) {
-        loading.innerText = "Error retrieving weather data.";
-      }
-    }
-  </script>
+  <script src="/web-dashboard-ci-cd/js/weather.js"></script>
 </body>
 </html>
