@@ -3,37 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>💰Crypto Dashboard</title>
+  <title>💰 Crypto Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="/web-dashboard-ci-cd/css/style.css">
 </head>
-<body>
-  <div class="container py-4">
-    <h2 class="mb-4 text-center">💰 Crypto Tracker Dashboard</h2>
+<body style="background-color: #ffeef3;">
+  <div class="container py-5">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2 class="fw-bold">💰 Crypto Tracker Dashboard</h2>
+      </div>
+    </div>
 
-    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search coin...">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search coin by name" aria-label="Search coin by name">
+      </div>
+    </div>
+
+    <div id="loading" class="text-center text-muted mb-3" style="display:none;">Loading crypto data...</div>
+
+    <div class="row mb-5">
+      <div class="col-md-10 mx-auto">
+        <canvas id="cryptoChart"></canvas>
+        <p id="updatedTime" class="text-muted small text-end mt-2"></p>
+      </div>
+    </div>
 
     <div class="table-responsive">
-      <table class="table table-bordered table-striped text-center">
-        <thead class="table-dark text-center">
+      <table class="table table-bordered table-striped align-middle">
+        <caption>Top 10 Cryptocurrencies</caption>
+        <thead class="table-dark">
           <tr>
-            <th>Coin</th>
+            <th>Name</th>
             <th>Symbol</th>
             <th>Price (USD)</th>
-            <th>24h Change (%)</th>
+            <th>Market Cap</th>
           </tr>
         </thead>
-        <tbody id="cryptoTable"></tbody>
+        <tbody id="cryptoTableBody"></tbody>
       </table>
-      
     </div>
+  </div>
 
-    <!-- Pie Chart -->
-    <div style="max-width: 400px; margin: 0 auto;">
-      <canvas id="cryptoChart"></canvas>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../js/crypto.js"></script>
+  <script src="/web-dashboard-ci-cd/js/crypto.js"></script>
 </body>
 </html>
